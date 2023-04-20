@@ -1,0 +1,120 @@
+.burger-button {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background: #009a48;
+    border-radius: 10%;
+}
+
+button {
+    border: 0;
+    background: white;
+}
+
+.line {
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+.line:nth-child(1) {
+    top: 30%;
+}
+
+.line:nth-child(2) {
+    top: 50%;
+}
+
+.line:nth-child(3) {
+    top: 70%;
+}
+
+button:focus>label>div:nth-child(1) {
+    animation: topLine 0.5s normal 1 forwards;
+}
+
+@keyframes topLine {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(calc(64px / 5)) rotate(45deg);
+    }
+}
+
+button:focus>label>div:nth-child(3) {
+    animation: bottomLine 0.5s normal 1 forwards;
+}
+
+@keyframes bottomLine {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(calc(64px / -5)) rotate(-45deg);
+    }
+}
+
+button:focus>label>div:nth-child(2) {
+    animation: middleLine 0.5s normal 1 forwards;
+}
+
+
+@keyframes middleLine {
+    0% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+.menu {
+    width: 0px;
+    height: 0%;
+    background: #009a48;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px black;
+    margin-left: 6px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    color: white;
+}
+
+@keyframes appear {
+    0% {
+        width: 0px;
+        height: 0%;
+    }
+
+    100% {
+        width: 300px;
+        height: 50%;
+
+    }
+}
+
+@keyframes disappear {
+    100% {
+        width: 0px;
+        height: 0%;
+    }
+
+    0% {
+        width: 300px;
+        height: 50%;
+
+    }
+}

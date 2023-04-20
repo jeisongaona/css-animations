@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="style.css">
+<script type='text/javascript'>
+    function appearMenu(){
+        var elem  = document.getElementById("menu");
+        elem.style.animation = "appear 2s normal 1 forwards";
+    }
+    function disappearMenu(){
+        var elem  = document.getElementById("menu");
+        elem.style.animation = "disappear 2s normal 1 forwards";
+    }
+</script>
+<button onclick="appearMenu()" onfocusout="disappearMenu()" id="burger-button">
+<label for="burger-button" class="burger-button">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</label>
+</button>
+<div class="menu" id="menu">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+</div>
